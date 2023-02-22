@@ -19,6 +19,13 @@ class RobotDetector(Node):
     """
 
     def __init__(self, data_updated_callback, debug=False, display_camera=False):
+        """
+            Constructor
+
+            :param data_updated_callback: called when the robot's position and heading is updated
+            :param debug: if True, prints debugging information
+            :param display_camera: if True, displays the camera image
+        """
         self._position = [0, 0]
         self._heading = 0
         self._timestamp = 0
@@ -60,7 +67,7 @@ class RobotDetector(Node):
         black_marker = [
             (0, 0, 0),
             (180, 255, 40)
-        ]        
+        ]
 
         front_m_pos = self._detect_marker(black_marker[0], black_marker[1])
         rear_m_pos = self._detect_marker(blue_marker[0], blue_marker[1])

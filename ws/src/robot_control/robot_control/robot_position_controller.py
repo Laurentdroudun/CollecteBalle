@@ -76,10 +76,10 @@ class RobotPositionController(Node):
 
             :return: None
         """
-        
+
         MAX_SPEED = 3.0
         MAX_HEAD = 0.75
-        
+
         u_x = distance_to_target / 70.0
         if abs(u_x) > MAX_SPEED:
             u_x = MAX_SPEED * np.sign(u_x)

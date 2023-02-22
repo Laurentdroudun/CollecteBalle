@@ -9,6 +9,9 @@ class RobotDetectorPublisher(Node):
     """
         Publisher class for the detected robot position (Pose2D message)
         Position is detected by the robot_detector using the top_camera
+
+        Publishes to:
+            - robot/position: detected robot position (Pose2D message)
     """
 
     def __init__(self):
